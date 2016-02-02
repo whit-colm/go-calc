@@ -24,7 +24,7 @@ func Start() {
 		case "a":
 			ymxb.Function()
 		case "b":
-			//call another thing
+			t.Startup()
 		case "c":
 			isDone = true
 		default:

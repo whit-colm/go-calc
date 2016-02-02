@@ -41,7 +41,7 @@ func Startup() {
 			fmt.Println(c.R + "{A}" + c.B0 + "  I have A & B, I need C!")
 			fmt.Println(c.R + "{B}" + c.B0 + "  I have B & C, I need A!")
 			fmt.Println(c.R + "{C}" + c.B0 + "  Nothing! Stop talking to me perv!")
-			doWhat = i.ReturnString(c.M + ">>> " + c.B)
+			doWhat = i.StringInput(c.M + ">>> " + c.B)
 		}
 	}
 }
@@ -49,9 +49,9 @@ func Startup() {
 func findC() {
 	//This the the part where we declare A&B
 	fmt.Println(c.CL + c.B1 + "What is side A's size?")
-	a := i.ReturnDouble(c.M + ">>> " + c.B)
+	a := i.DoubleInput(c.M + ">>> " + c.B)
 	fmt.Println(c.CL + c.B1 + "What is side B's size?")
-	b := i.ReturnDouble(c.M + ">>> " + c.B)
+	b := i.DoubleInput(c.M + ">>> " + c.B)
 	//Now we math.
 	a2 := a * b
 	b2 := b * b
@@ -72,13 +72,13 @@ func findC() {
 func findAorB() {
 	//This the the part where we declare A&B
 	fmt.Println(c.CL + c.B1 + "What is side C's size?")
-	c1 := i.ReturnDouble(c.M + ">>> " + c.B)
+	c1 := i.DoubleInput(c.M + ">>> " + c.B)
 	fmt.Println(c.CL + c.B1 + "What is side B's size?")
-	b := i.ReturnDouble(c.M + ">>> " + c.B)
+	b := i.DoubleInput(c.M + ">>> " + c.B)
 	//Now we math.
-	c2 := a * a
+	c2 := c1 * c1
 	b2 := b * b
-	a2 := a2 - b2
+	a2 := c2 - b2
 	a := math.Sqrt(c2)
 	//Defining a squared, b squared and c squared
 	//along with solving for c (I used c1 as to prevent the possibility of problems with c, colors)
