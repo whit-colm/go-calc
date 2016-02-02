@@ -28,8 +28,10 @@ func Startup() {
 		switch doWhat {
 		case "a":
 			findC()
+			doWhat = ""
 		case "b":
 			findAorB()
+			doWhat = ""
 		case "c":
 			isDone = true
 		default:
@@ -53,7 +55,7 @@ func findC() {
 	fmt.Println(c.CL + c.B1 + "What is side B's size?")
 	b := i.DoubleInput(c.M + ">>> " + c.B)
 	//Now we math.
-	a2 := a * b
+	a2 := a * a
 	b2 := b * b
 	c2 := a2 + b2
 	c1 := math.Sqrt(c2)
@@ -61,12 +63,13 @@ func findC() {
 	//along with solving for c (I used c1 as to prevent the possibility of problems with c, colors)
 
 	//Now we show work
-	fmt.Printf("%s%s%f (a) squared is %f, %f (b) squared is %f.\n", c.CL, c.B1, a, a2, b, b2)
+	fmt.Printf("%s%s%f%s (a) squared is %s%f%s, %s%f%s (b) squared is %s%f%s.\n", c.CL, c.B1, a, c.B01, c.B1, a2, c.B01, c.B1, b, c.B01, c.B1, b2, c.B01)
 	s.Spacer(1)
-	fmt.Printf("%s%f+%f=%f.\n", c.B1, a2, b2, c2)
-	fmt.Printf("%sThe square root of %f is %f.\n", c.B1, c2, c1)
+	fmt.Printf("%s%f%s + %s%f%s = %s%f%s.\n", c.B1, a2, c.B01, c.B1, b2, c.B01, c.B1, c2, c.B01)
+	fmt.Printf("%sThe square root of %s%f%s is %s%f%s.\n", c.B01, c.B1, c2, c.B01, c.B1, c1, c.B01)
 	s.Spacer(2)
-	fmt.Printf("%sc = %e\n", c.B00, c1)
+	fmt.Printf("%sc = %e\n", c.O, c1)
+	s.Go(1)
 }
 
 func findAorB() {
@@ -79,15 +82,16 @@ func findAorB() {
 	c2 := c1 * c1
 	b2 := b * b
 	a2 := c2 - b2
-	a := math.Sqrt(c2)
+	a := math.Sqrt(a2)
 	//Defining a squared, b squared and c squared
 	//along with solving for c (I used c1 as to prevent the possibility of problems with c, colors)
 
 	//Now we show work
 	fmt.Printf("%s%s%f (c) squared is %f, %f (b) squared is %f.\n", c.CL, c.B1, c1, c2, b, b2)
 	s.Spacer(1)
-	fmt.Printf("%s%f-%f=%f.\n", c.B1, c2, b2, a2)
-	fmt.Printf("%sThe square root of %f is %f.\n", c.B1, a2, a)
+	fmt.Printf("%s%f%s - %s%f%s = %s%f%s.\n", c.B1, c2, c.B01, c.B1, b2, c.B01, c.B1, a2, c.B01)
+	fmt.Printf("%sThe square root of %s%f%s is %s%f%s.\n", c.B01, c.B1, a2, c.B01, c.B1, a, c.B1)
 	s.Spacer(2)
-	fmt.Printf("%sa = %e\n", c.B00, a)
+	fmt.Printf("%sa = %e\n", c.O, a)
+	s.Go(1)
 }
