@@ -5,6 +5,7 @@ import (
 	c "github.com/skilstak/go/colors"
 	i "github.com/whitman-colm/go-lib/src/input"
 	s "github.com/whitman-colm/go-lib/src/other"
+	t "lib/triangle"
 	ymxb "lib/ymxb"
 )
 
@@ -25,7 +26,7 @@ func Start() {
 		case "b":
 			//call another thing
 		case "c":
-			isDone := true
+			isDone = true
 		default:
 			//forces a responce
 			fmt.Println(c.CL + c.B00 + "Mathmatic solver program thing.")
@@ -34,11 +35,11 @@ func Start() {
 			fmt.Println(c.B1 + "What are you too lazy to do today?")
 			fmt.Println(c.Y + "Select one of the letters in red")
 			s.Spacer(1)
-			fmt.Println(c.R + "{A}" + c.B0 + "Find a linear slope equation")
-			fmt.Println(c.R + "{B}" + c.B0 + "Find the hypotonuse of a right triangle")
-			fmt.Println(c.R + "{C}" + c.B0 + "Nothing go away")
+			fmt.Println(c.R + "{A}" + c.B0 + "  Find a linear slope equation")
+			fmt.Println(c.R + "{B}" + c.B0 + "  Find the hypotonuse of a right triangle")
+			fmt.Println(c.R + "{C}" + c.B0 + "  Nothing go away")
 			s.Spacer(1)
-			doWhatNow := i.StringInput(c.M + ">>>" + c.B)
+			doWhatNow = i.StringInput(c.B + ">>>" + c.M)
 		}
 	}
 }

@@ -23,7 +23,7 @@ func Startup() {
 	isDone := false
 	for isDone == false{
 		//for loop so you don't have to come back here each time.
-		fmt.Println(c.B01 + "pythagorean theorem calculator " + Version)
+		fmt.Println(c.CL + c.B01 + "pythagorean theorem calculator " + Version)
 		s.Spacer(2)
 		fmt.Println(c.B1+"What do you need solved?"+c.X)
 		fmt.Println(c.Y+"Enter one of the letters in red:")
