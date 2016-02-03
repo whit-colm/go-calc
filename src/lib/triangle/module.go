@@ -68,7 +68,7 @@ func findC() {
 	fmt.Printf("%s%f%s + %s%f%s = %s%f%s.\n", c.B1, a2, c.B01, c.B1, b2, c.B01, c.B1, c2, c.B01)
 	fmt.Printf("%sThe square root of %s%f%s is %s%f%s.\n", c.B01, c.B1, c2, c.B01, c.B1, c1, c.B01)
 	s.Spacer(2)
-	fmt.Printf("%sc = %e\n", c.O, c1)
+	fmt.Printf("%sc = %f\n", c.O, c1)
 	s.Go(1)
 }
 
@@ -92,6 +92,6 @@ func findAorB() {
 	fmt.Printf("%s%f%s - %s%f%s = %s%f%s.\n", c.B1, c2, c.B01, c.B1, b2, c.B01, c.B1, a2, c.B01)
 	fmt.Printf("%sThe square root of %s%f%s is %s%f%s.\n", c.B01, c.B1, a2, c.B01, c.B1, a, c.B1)
 	s.Spacer(2)
-	fmt.Printf("%sa = %e\n", c.O, a)
+	fmt.Printf("%sa = %f\n", c.O, a)
 	s.Go(1)
 }

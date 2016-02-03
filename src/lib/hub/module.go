@@ -5,7 +5,8 @@ import (
 	c "github.com/skilstak/go/colors"
 	i "github.com/whitman-colm/go-lib/src/input"
 	s "github.com/whitman-colm/go-lib/src/other"
-	t "lib/triangle"
+	dist "lib/disAndMid"
+	tria "lib/triangle"
 	ymxb "lib/ymxb"
 )
 
@@ -24,8 +25,10 @@ func Start() {
 		case "a":
 			ymxb.Function()
 		case "b":
-			t.Startup()
+			tria.Startup()
 		case "c":
+			dist.Startup()
+		case "d":
 			isDone = true
 		default:
 			//forces a responce
@@ -37,7 +40,8 @@ func Start() {
 			s.Spacer(1)
 			fmt.Println(c.R + "{A}" + c.B0 + "  Find a linear slope equation")
 			fmt.Println(c.R + "{B}" + c.B0 + "  Find the hypotonuse of a right triangle")
-			fmt.Println(c.R + "{C}" + c.B0 + "  Nothing go away")
+			fmt.Println(c.R + "{C}" + c.B0 + "  Find distance or midpoint")
+			fmt.Println(c.R + "{D}" + c.B0 + "  Nothing go away")
 			s.Spacer(1)
 			doWhatNow = i.StringInput(c.B + ">>>" + c.M)
 		}
