@@ -24,10 +24,13 @@ func Start() {
 		switch doWhatNow {
 		case "a":
 			ymxb.Function()
+			doWhatNow = ""
 		case "b":
 			tria.Startup()
+			doWhatNow = ""
 		case "c":
 			dist.Startup()
+			doWhatNow = ""
 		case "d":
 			isDone = true
 		default:
