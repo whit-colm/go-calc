@@ -67,7 +67,7 @@ func findC() {
 	c1 := math.Sqrt(c2)
 	//Now we show work
 	fmt.Printf("%s%sThe formula is: sqrt((x2-x1)^2+(y2-y1)^2)\n", c.CL, c.B01)
-	fmt.Printf("%sLet's do this:\nsqrt((%s%f%s-%s%f%s)^2-(%s%f%s-%s%f%s)^2\n",
+	fmt.Printf("%sLet's do this:\nsqrt((%s%f%s-%s%f%s)^2+(%s%f%s-%s%f%s)^2\n",
 		c.B01, c.B1, x2, c.B01, c.B1, x1, c.B01, c.B1, y2, c.B01, c.B1, y1, c.B01)
 	fmt.Printf("%ssqrt((%s%f%s)^2+(%s%f%s)^2)\n", c.B01, c.B1, x, c.B01, c.B1, y, c.B01)
 	fmt.Printf("%ssqrt(%s%f%s+%s%f%s)\n", c.B01, c.B1, xSq, c.B01, c.B1, ySq, c.B01)
