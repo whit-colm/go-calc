@@ -1,0 +1,3 @@
+export PATH=$HOME/repos/calculator/bin:$PATH
+export GOPATH=$HOME/repos/calculator
+export GOBIN=$HOME/repos/calculator/bin
