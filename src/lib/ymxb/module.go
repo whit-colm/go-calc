@@ -12,10 +12,11 @@ import (
 //EXPLANATION!//
 ////////////////
 /*
-*This is so clunky because I made this in late 2015 and have
-*no intention at this time of rewriting this with my new
-*knowledge of golang. I might redo all of this when I have
-*more time but for now I'm going to let it do it's thing. soz.
+* This is so clunky because I made this in late 2015 and have
+* no intention at this time of rewriting this with my new
+* knowledge of golang. I might redo all of this when I have
+* more time but for now I'm going to let it do it's thing. soz.
+* I am also aware of the fact I didn't document any of this.
  */
 
 func Function() {
