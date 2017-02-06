@@ -1,3 +1,3 @@
-export PATH=$HOME/repos/Gocalculator/bin:$PATH
-export GOPATH=$HOME/repos/Gocalculator
-export GOBIN=$HOME/repos/Gocalculator/bin
+export PATH=$HOME/repos/go-calc/bin:$PATH
+export GOPATH=$HOME/repos/go-calc
+export GOBIN=$HOME/repos/go-calc/bin
