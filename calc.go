@@ -1,6 +1,6 @@
 package main
 
-import s "lib/hub"
+import s "./modules/hub"
 
 func main() {
 	s.Start()

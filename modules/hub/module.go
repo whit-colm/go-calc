@@ -6,11 +6,11 @@ import (
 	i "github.com/whitman-colm/go-lib/src/input"
 	s "github.com/whitman-colm/go-lib/src/other"
 	ccs "lib/ccs"
-	dist "lib/disAndMid"
-	tria "lib/triangle"
-	ymxb "lib/ymxb"
+	dist "../disAndMid"
+	tria "../triangle"
+	ymxb "../ymxb"
 	//"strings"
-	quad "lib/quadratic"
+	quad "../quadratic"
 )
 
 //////////////////////////////////////////////////
