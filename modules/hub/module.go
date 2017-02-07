@@ -7,9 +7,11 @@ import (
 	quad "../quadratic"
 	tria "../triangle"
 	ymxb "../ymxb"
+	m "github.com/marcmak/calc/calc/solver.go"
 	c "github.com/skilstak/go-colors"
 	i "github.com/whitman-colm/go-lib/src/input"
 	s "github.com/whitman-colm/go-lib/src/other"
+	"strconv"
 )
 
 // import
@@ -25,14 +27,20 @@ import (
 
 func Start() {
 	solve := ""
-	for solve != "q" {
+	fmt.Println(c.CL + "Type " + c.O + "fn" + c.X + " for math functions and " + c.O + "q" + c.X + " to quit.")
 
-		fmt.Println(c.CL + "Type " + c.O + "fn" + c.X + " for math functions and " + c.O + "q" + c.X + " to quit.")
-		solve = i.StringInput("~> ")
+	for solve != "q" {
+		solve = i.StringInput("~> " + c.B01)
 		if solve == "fn" {
 			mathFuncs()
+		} else if solve == "q" {
+			fmt.Println(c.X + "Exiting calculator. Have a great day.")
+		} else if m.ContainsLetter(solve) == false {
+			ans := m.Solve(solve)
+			ansFmt := strconv.FormatFloat(ans, 'E', -1, 64)
+			fmt.Println(c.B01 + " [ " + c.G + ansFmt + c.B01 + " ]")
 		} else {
-			fmt.Println(c.X + "Lolwut?")
+			fmt.Println(c.R + "Input could not be read by system. Please try again.")
 		}
 	}
 }
