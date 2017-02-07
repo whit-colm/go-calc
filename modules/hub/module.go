@@ -2,16 +2,19 @@ package nil
 
 import (
 	"fmt"
+
+	dist "../disAndMid"
+	quad "../quadratic"
+	tria "../triangle"
+	ymxb "../ymxb"
 	c "github.com/skilstak/go-colors"
 	i "github.com/whitman-colm/go-lib/src/input"
 	s "github.com/whitman-colm/go-lib/src/other"
-	ccs "lib/ccs"
-	dist "../disAndMid"
-	tria "../triangle"
-	ymxb "../ymxb"
-	//"strings"
-	quad "../quadratic"
 )
+
+// import
+//ccs "lib/ccs"
+//"strings"
 
 //////////////////////////////////////////////////
 //This is just a hub for each of the modules//////
@@ -52,7 +55,7 @@ func mathFuncs() {
 			dist.Startup()
 			doWhatNow = ""
 		case "d":
-			ccs.Startup()
+			// ccs.Startup()  // not found?
 			doWhatNow = ""
 		case "e":
 			quad.FindDiscriminant()
