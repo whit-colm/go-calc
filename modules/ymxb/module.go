@@ -2,7 +2,7 @@ package nil
 
 import (
 	"fmt"
-	c "github.com/skilstak/go/colors"
+	c "github.com/skilstak/go-colors"
 	i "github.com/whitman-colm/go-lib/src/input"
 	u "github.com/whitman-colm/go-lib/src/other"
 	s "./module"
