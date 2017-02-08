@@ -3,14 +3,15 @@ package nil
 import (
 	"fmt"
 
+	m "../../calc"
 	dist "../disAndMid"
 	quad "../quadratic"
 	tria "../triangle"
 	ymxb "../ymxb"
-	m "github.com/marcmak/calc/calc/solver.go"
 	c "github.com/skilstak/go-colors"
 	i "github.com/whitman-colm/go-lib/src/input"
 	s "github.com/whitman-colm/go-lib/src/other"
+	//m "markmac/calc"
 	"strconv"
 )
 
@@ -27,14 +28,20 @@ import (
 
 func Start() {
 	solve := ""
-	fmt.Println(c.CL + "Type " + c.O + "fn" + c.X + " for math functions and " + c.O + "q" + c.X + " to quit.")
+	fmt.Println(c.CL + c.X + "Get help by using " + c.O + "?" + c.X + ".")
 
 	for solve != "q" {
 		solve = i.StringInput("~> " + c.B01)
 		if solve == "fn" {
 			mathFuncs()
+			fmt.Println(c.CL + c.X + "Get help by using " + c.O + "?" + c.X + ".")
+		} else if solve == "?" || solve == "help" || solve == "h" {
+			help()
+			fmt.Println(c.CL + c.X + "Get help by using " + c.O + "?" + c.X + ".")
 		} else if solve == "q" {
 			fmt.Println(c.X + "Exiting calculator. Have a great day.")
+		} else if solve == "cl" || solve == "clear" || solve == "x" {
+			fmt.Println(c.CL + c.X + "Get help by using " + c.O + "?" + c.X + ".")
 		} else if m.ContainsLetter(solve) == false {
 			ans := m.Solve(solve)
 			ansFmt := strconv.FormatFloat(ans, 'E', -1, 64)
@@ -86,4 +93,16 @@ func mathFuncs() {
 			doWhatNow = i.StringInput(c.B + ">>>" + c.X)
 		}
 	}
+}
+
+func help() {
+	fmt.Println(c.CL + c.O + "GO CALCULATE USAGE GUIDE AND COMMANDS")
+	s.Spacer(1)
+	fmt.Println(c.X + "go-calc has the ability to solve simple equasions directly from the prompt.\nSimply type in an expression and (hopefully) go-calc will spit out an answer.\nIt can also evaluate certian equasions. Commands are below:")
+	s.Spacer(2)
+	fmt.Println(c.B0 + "?" + c.X + ", " + c.B0 + "h" + c.X + ", " + c.B0 + "help   " + c.X + ": " + c.B01 + "Open help pane. (you should know this one because you're using it now boi-o.)")
+	fmt.Println(c.B0 + "cl" + c.X + ", " + c.B0 + "x" + c.X + ", " + c.B0 + "clear " + c.X + ": " + c.B01 + "Clear screen.)")
+	fmt.Println(c.B0 + "q           " + c.X + " : " + c.B01 + "Quit the program.")
+	fmt.Println(c.B0 + "fn          " + c.X + " : " + c.B01 + "Open functions menu.")
+	s.Go(1)
 }
